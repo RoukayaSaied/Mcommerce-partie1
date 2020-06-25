@@ -115,5 +115,10 @@ public class ProductController {
         return produitsMarges;
     }
 
+    @GetMapping(value = "/AdminProduitsTries")
+    public List<Product> trierProduitsParOrdreAlphabetique() {
+        return productDao.findAllByOrderByNomAsc();
+    }
+
 
 }
